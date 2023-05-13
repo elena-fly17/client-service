@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: client-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+      enabled: true
+      discovery:
+        enabled: true
+        service-id: config-server1
+  config:
+    import: "optional:configserver:"
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+server:
+  port: 8082
