@@ -17,4 +17,9 @@ public class RestController {
     public List<Book> getAllBooks() {
         return feignUtil.getAllBooks();
     }
+
+    @GetMapping("/test")
+    public String getTestStringLoadBalancer() {
+        return "Test string from client-service";
+    }
 }
