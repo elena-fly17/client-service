@@ -49,6 +49,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- зависимость для работы с Circuit Breaker-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+        </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
