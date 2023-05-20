@@ -5,8 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
+// ЭТО ПРЕДЫДУЩИЙ РАБОЧИЙ ВАРИАНТ
+//@FeignClient(value = "book-service", url = "http://localhost:8081/api/books",
+//        name = "book-service", fallback = Fallback.class)
+
 @FeignClient(value = "book-service", url = "http://localhost:8081/api/books",
-        name = "book-service", fallback = Fallback.class)
+        name = "book-service", fallbackFactory = FeignUtilFallbackFactory.class)
 public interface FeignUtil {
 
     @GetMapping
