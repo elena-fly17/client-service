@@ -10,6 +10,14 @@ spring:
         service-id: config-server1
   config:
     import: "optional:configserver:"
+  sleuth:
+    sampler:
+      probability: 1
+    integration:
+      enabled: true
+  zipkin:
+    enabled: true
+    base-url: http://192.168.99.102:9411
 eureka:
   client:
     service-url:
