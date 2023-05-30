@@ -29,3 +29,7 @@ server:
 feign:
   circuitbreaker:
     enabled: true
+
+logging:
+  file:
+    path: E:\Java\WorkTools\logs
